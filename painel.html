@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu painel - Empreende Mossoró</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body data-page="painel">
+    <header class="navbar">
+        <div class="logo">Empreende <span>Mossoró</span></div>
+        <nav><ul class="nav-links"><li><a href="index.html">Início</a></li></ul></nav>
+    </header>
+    <section class="page" id="painel-empresa" hidden>
+        <h2>Painel da empresa</h2>
+        <div class="form-container wide">
+            <h2 id="titulo-form">Publicar nova vaga</h2>
+            <form id="form-vaga" novalidate>
+                <div class="form-group"><label for="v-titulo">Título da vaga</label><input type="text" id="v-titulo" name="titulo"></div>
+                <div class="form-group"><label for="v-area">Área</label><select id="v-area" name="area"></select></div>
+                <div class="form-group"><label for="v-mod">Modalidade</label><select id="v-mod" name="modalidade"></select></div>
+                <div class="form-group"><label for="v-tipo">Tipo de contratação</label><select id="v-tipo" name="tipo"></select></div>
+                <div class="form-group"><label for="v-cidade">Cidade</label><input type="text" id="v-cidade" name="cidade" value="Mossoró"></div>
+                <div class="form-group"><label for="v-salario">Remuneração (opcional)</label><input type="text" id="v-salario" name="salario" placeholder="Ex: R$ 2.000"></div>
+                <div class="form-group"><label for="v-descricao">Descrição</label><textarea id="v-descricao" name="descricao"></textarea></div>
+                <div class="form-group"><label for="v-requisitos">Requisitos (opcional)</label><textarea id="v-requisitos" name="requisitos"></textarea></div>
+                <button type="submit" class="btn-submit" id="btn-vaga">Publicar vaga</button>
+                <button type="button" class="btn-submit sec" id="cancelar" hidden>Cancelar edição</button>
+            </form>
+            <div class="msg" id="msg-vaga" hidden></div>
+        </div>
+        <h2 class="sub">Minhas vagas</h2>
+        <div class="msg" id="msg-gestao" hidden></div>
+        <div class="grid-members" id="lista-vagas"></div>
+        <h2 class="sub">Candidaturas recebidas</h2>
+        <div class="tabela" id="lista-cands"></div>
+    </section>
+
+    <section class="page" id="painel-candidato" hidden>
+        <h2>Painel do candidato</h2>
+        <div class="form-container wide">
+            <h2>Meu perfil</h2>
+            <form id="form-perfil" novalidate>
+                <div class="form-group"><label for="p-nome">Nome completo</label><input type="text" id="p-nome" name="nome"></div>
+                <div class="form-group"><label for="p-telefone">Telefone / WhatsApp</label><input type="tel" id="p-telefone" name="telefone"></div>
+                <div class="form-group"><label for="p-cidade">Cidade</label><input type="text" id="p-cidade" name="cidade"></div>
+                <div class="form-group"><label for="p-habilidades">Habilidades (separadas por vírgula)</label><input type="text" id="p-habilidades" name="habilidades" placeholder="Ex: Atendimento, Excel, Vendas"></div>
+                <div class="form-group"><label for="p-resumo">Resumo profissional</label><textarea id="p-resumo" name="resumo"></textarea></div>
+                <div class="form-group"><label for="curriculo">Currículo (PDF, DOC ou DOCX, até 5 MB)</label><input type="file" id="curriculo" accept=".pdf,.doc,.docx"><p class="meta" id="cv-atual" style="margin-top:8px"></p></div>
+                <button type="submit" class="btn-submit">Salvar perfil</button>
+            </form>
+            <div class="msg" id="msg-perfil" hidden></div>
+        </div>
+        <h2 class="sub">Minhas candidaturas</h2>
+        <div class="grid-members" id="lista-cands"></div>
+    </section>
+
+    <footer><p>&copy; 2026 Empreende Mossoró. Conectando negócios, fortalecendo a economia local. ☀️</p></footer>
+    <script src="js/boot.js"></script>
+</body>
+</html>

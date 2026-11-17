@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Empreende Mossoró</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body data-page="entrar">
+    <header class="navbar">
+        <div class="logo">Empreende <span>Mossoró</span></div>
+        <nav><ul class="nav-links"><li><a href="index.html">Início</a></li></ul></nav>
+    </header>
+    <section class="page">
+        <div class="duas-colunas">
+            <div class="form-container">
+                <h2>Entrar</h2>
+                <p>Acesse como empresa ou candidato.</p>
+                <form id="form-login" novalidate>
+                    <div class="form-group"><label for="l-email">E-mail</label><input type="email" id="l-email" name="email" autocomplete="username"></div>
+                    <div class="form-group"><label for="l-senha">Senha</label><input type="password" id="l-senha" name="senha" autocomplete="current-password"></div>
+                    <button type="submit" class="btn-submit">Entrar</button>
+                </form>
+                <div class="msg" id="msg-login" hidden></div>
+                <p class="dica">Contas de exemplo (senha <strong>Senha123</strong>): contato@mossorotech.com.br (empresa) · carlos.lima@exemplo.com (candidato)</p>
+            </div>
+            <div class="form-container">
+                <h2>Sou candidato</h2>
+                <p>Crie sua conta para se candidatar. Para empresas, o cadastro fica em <a href="index.html#fazer-parte">Fazer Parte</a>.</p>
+                <form id="form-cadastro" novalidate>
+                    <div class="form-group"><label for="c-nome">Nome completo</label><input type="text" id="c-nome" name="nome"></div>
+                    <div class="form-group"><label for="c-email">E-mail</label><input type="email" id="c-email" name="email"></div>
+                    <div class="form-group"><label for="c-tel">Telefone / WhatsApp</label><input type="tel" id="c-tel" name="telefone" placeholder="(84) 99999-0000"></div>
+                    <div class="form-group"><label for="c-cidade">Cidade</label><input type="text" id="c-cidade" name="cidade" value="Mossoró"></div>
+                    <div class="form-group"><label for="c-senha">Senha (mín. 8, com letras e números)</label><input type="password" id="c-senha" name="senha" autocomplete="new-password"></div>
+                    <button type="submit" class="btn-submit">Criar conta</button>
+                </form>
+                <div class="msg" id="msg-cadastro" hidden></div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Empreende Mossoró. Conectando negócios, fortalecendo a economia local. ☀️</p></footer>
+    <script src="js/boot.js"></script>
+</body>
+</html>

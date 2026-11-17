@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empreende Mossoró - Rede de Empreendedores Locais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body data-page="index">
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="navbar">
+        <div class="logo">Empreende <span>Mossoró</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#membros">Membros</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#fazer-parte" class="btn-nav">Fazer Parte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Conectando o Empreendedorismo de Mossoró</h1>
+            <p>A maior rede de networking, parcerias e fortalecimento de negócios da Terra de Santa Luzia. Una-se a nós e faça sua empresa crescer.</p>
+            <a href="#fazer-parte" class="btn-main">Cadastrar Meu Negócio</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre / Benefícios -->
+    <section id="sobre" class="features">
+        <h2>Por que fazer parte da nossa rede?</h2>
+        <div class="grid-features">
+            <div class="card-feature">
+                <h3>Networking Local</h3>
+                <p>Conecte-se diretamente com outros empresários e comerciantes de Mossoró e região do Oeste Potiguar.</p>
+            </div>
+            <div class="card-feature">
+                <h3>Visibilidade</h3>
+                <p>Tenha sua empresa listada na maior vitrine de negócios locais, facilitando que novos clientes te encontrem.</p>
+            </div>
+            <div class="card-feature">
+                <h3>Eventos e Parcerias</h3>
+                <p>Participe de rodadas de negócios, palestras, workshops e crie conexões estratégicas para o seu nicho.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Empreendedores (Membros) -->
+    <section id="membros" class="members">
+        <h2>Empreendedores em Destaque</h2>
+        <p class="subtitle">Conheça algumas das mentes que movimentam a economia mossoroense.</p>
+        
+        <div class="grid-members" id="lista-empresas"></div>
+    </section>
+
+    <!-- Seção Formulário (Fazer Parte) -->
+    <section id="fazer-parte" class="cta-form">
+        <div class="form-container">
+            <h2>Traga seu negócio para a comunidade</h2>
+            <p>Preencha os dados abaixo para submeter sua empresa e começar a expandir sua rede de contatos.</p>
+            
+            <form id="form-empresa" novalidate>
+                <div class="form-group">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" placeholder="Ex: Maria Silva" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa">Nome da Empresa</label>
+                    <input type="text" id="empresa" placeholder="Ex: Inova Mossoró Ltda" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp de Contato</label>
+                    <input type="tel" id="whatsapp" placeholder="(84) 99999-0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="segmento">Segmento de Atuação</label>
+                    <select id="segmento" required>
+                        <option value="">Selecione...</option>
+                        <option value="comercio">Comércio / Varejo</option>
+                        <option value="servicos">Prestação de Serviços</option>
+                        <option value="tecnologia">Tecnologia / Inovação</option>
+                        <option value="gastronomia">Gastronomia / Alimentação</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail de Acesso</label>
+                    <input type="email" id="email" placeholder="voce@empresa.com.br" autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha (mín. 8, com letras e números)</label>
+                    <input type="password" id="senha" autocomplete="new-password">
+                </div>
+                <button type="submit" class="btn-submit">Enviar Cadastro</button>
+            </form>
+            <div class="msg" id="msg-empresa" hidden></div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Empreende Mossoró. Conectando negócios, fortalecendo a economia local. ☀️</p>
+    </footer>
+
+    <script src="js/boot.js"></script>
+</body>
+</html>
